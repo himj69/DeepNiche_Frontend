@@ -9,7 +9,7 @@ type Props = ViewProps & {
 
 export default function Container({
    colorContainer,
-   scroll = false, 
+   scroll = true, 
    scrollViewRef,
    ...rest
 } : Props) {

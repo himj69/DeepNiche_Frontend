@@ -175,7 +175,7 @@ export const Colors = {
    dark : {
       base : "#F5F5F5",
       grayLight : "#dddddd",
-      graymid : "#cccccc",
+      grayMid : "#cccccc",
       grayDark : "#7E7E7E",
       inverse : "#2C2C2C",
 
