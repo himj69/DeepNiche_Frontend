@@ -30,9 +30,7 @@ export default function HapticTab( props : BottomTabBarButtonProps) {
       <PlatformPressable
          {...props}
          onPressIn={(ev) => {
-            if ( process.env.EXPO_OS === 'ios') {
                Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Medium)
-            }
             props.onPressIn?.(ev);
          }}
       />
