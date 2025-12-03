@@ -7,7 +7,7 @@ export const ArticleTest = {
     published: "2024-01-15T10:00:00Z",
     updated: "2024-01-16T12:00:00Z",
     categories: ["physics:quant-ph", "cs:cs:AI"],
-    main_category:"physics:quant-ph",
+    main_category:"physics:cond-mat:stat-mech",
     language: "en",
     source: "arxiv"
 }

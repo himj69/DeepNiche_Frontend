@@ -18,6 +18,6 @@ export const DomainIcon: Record<string, (props : IconProps) => ReactElement > = 
    "DOMAIN_NONLINEAR_PHYSICS" : (props) => <MaterialCommunityIcons name="pulse" {...props}/>,
    "DOMAIN_NUCLEAR_PHYSICS" : (props) => <MaterialCommunityIcons name="radioactive-circle-outline" {...props}/>,
    "DOMAIN_QUANTITATIVE_BIOLOGY" : (props) => <MaterialCommunityIcons name="dna" {...props}/>,
-   "DOMAIN_APPLIED_PHYSICS" : (props) => <Ionicons name="cog-outline" {...props}/>,
+   "DOMAIN_APPLIED_PHYSICS" : (props) => <FontAwesome5 name="layer-group" {...props}/>,
    "DOMAIN_QUANTITATIVE_FINANCE" : (props) => <Fontisto name="bitcoin" {...props}/>,
 }
