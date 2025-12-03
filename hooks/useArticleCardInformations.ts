@@ -15,7 +15,7 @@ type ArticleCardInfoType = {
 
 
 
-export function useArtcielCardInformations ( article : ArticleType) : ArticleCardInfoType {
+export function useArtcielCardInformations ( article : ArticleType , sizeIcon : number) : ArticleCardInfoType {
    const colors = useThemeColors();
    
       //récupration du style par rapport a l'article
@@ -28,7 +28,7 @@ export function useArtcielCardInformations ( article : ArticleType) : ArticleCar
       const authors = article.authors.join(", ")
    
       const Icon = DomainIcon[Categories[category].domain as keyof typeof DomainIcon]
-      const sizeIcon = 108
+      //const sizeIcon = 108
       const IconElement = Icon({size : sizeIcon, color: "rgba(255,255,255,0.4)"})
 
       return { articleColor, category, title, authors, IconElement}

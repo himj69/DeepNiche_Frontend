@@ -14,7 +14,7 @@ type ArticleProps = {
 export default function ArticleCard({ article } : ArticleProps) {
    const colors = useThemeColors();
 
-   const { articleColor, category, title, authors, IconElement } = useArtcielCardInformations( article )
+   const { articleColor, category, title, authors, IconElement } = useArtcielCardInformations( article, 100 )
 
    return (
       <ZStack height={100} width="100%" borderRadius={16} backgroundColor={articleColor} overflow="hidden">
