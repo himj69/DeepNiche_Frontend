@@ -1,4 +1,4 @@
-const categories = {
+export const Categories = {
   // Domaine QUANTIC
   "physics:quant-ph": { domain: "DOMAIN_QUANTIC", color: "quanticQuantPh", label: "Quantum Physics" },
 

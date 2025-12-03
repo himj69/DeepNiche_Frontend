@@ -7,7 +7,7 @@ export const Colors = {
       inverse : "#2C2C2C",
 
       // Domaine QUANTIC
-      quanticQuantPh: "#f896cb", // rose
+      quanticQuantPh: "#f896cb",
 
       // Domaine GRAVITATION
       gravitationGrQc: "#6366F1",
