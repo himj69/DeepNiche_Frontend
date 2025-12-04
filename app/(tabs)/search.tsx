@@ -1,6 +1,6 @@
 import Container from "@/components/display/Container"
 import { useThemeColors } from "@/hooks/useThemeColors"
-import { Text, View } from "tamagui"
+import { Button, Text } from "tamagui"
 
 export default function Search () {
    const colors = useThemeColors()
