@@ -1,4 +1,4 @@
-import { FetchError, DailyArticleType } from "@/types/responseType"
+import { FetchError, DailyArticleType, WeeklyArticlesType } from "@/types/responseType"
 
 
 const BASE_URL = "http://192.168.188.92:3006"
@@ -45,19 +45,31 @@ async function safeFetch<T>(promise: Promise<Response>): Promise<[T | null, Fetc
 }
 
 
+//fonction getData general 
+async function getData<T>( 
+   path : string ,
+   options ?: { method?: string ,headers?: any, body?: any}  
+) : Promise<T | null> {
+   const promise = fetch(`${BASE_URL}${path}`, options)
 
-export async function Daily (): Promise<DailyArticleType | null> {
-
-   const promise = fetch(`${BASE_URL}${ENDPOINT.DAILY}`)
-   
-   const [data, error] = await safeFetch<DailyArticleType>(promise)
+   const [data, error] = await safeFetch<T>(promise)
 
    if (error) {
-      console.error('Error fetching daily :', error.message , error?.status, error?.original)
+      console.error('Error fetching :', error.message , error?.status, error?.original)
    }
 
-   console.log(data)
+   //console.log(data)
    return data
+}
+
+export async function DailyData(): Promise<DailyArticleType | null> {
+   //recuperatin des data du jour seulement
+   return getData<DailyArticleType>(ENDPOINT.DAILY)
+}
+
+export async function WeeklyData(): Promise<WeeklyArticlesType | null> {
+   //recuperation des data de la semaine seulement
+   return getData<WeeklyArticlesType>(ENDPOINT.WEEKLY)
 }
 
 

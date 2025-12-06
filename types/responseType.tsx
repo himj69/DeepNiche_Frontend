@@ -20,6 +20,15 @@ export type DailyArticleType = {
 }
 
 //type de la response de l Api pour les articles de la semaine
+export type WeeklyArticlesType = {
+   weekly_articles : WeeklyArticlesByDomainType[];
+   expires_at: string
+}
+
+type WeeklyArticlesByDomainType = {
+   domain : string ;
+   articles : ArticleType[] ;
+}
 
 
 //type d erreur retouné par mes fonctions
@@ -28,3 +37,6 @@ export type FetchError = {
    status?: number;
    original?: unknown;
 }
+
+
+
