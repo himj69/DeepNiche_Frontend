@@ -1,4 +1,5 @@
-import { FetchError, DailyArticleType, WeeklyArticlesType } from "@/types/responseType"
+import { FetcherResponseType } from "@/class/DataCacheClass"
+import { FetchError, DailyArticleType, WeeklyArticlesType, ArticleType, WeeklyArticlesByDomainType } from "@/types/responseType"
 
 
 const BASE_URL = "http://192.168.188.92:3006"
@@ -62,14 +63,25 @@ async function getData<T>(
    return data
 }
 
-export async function DailyData(): Promise<DailyArticleType | null> {
+
+
+
+/*
+IMPORTANT
+
+*/
+
+
+//utilisations des endpoints
+
+export async function DailyData(): Promise<FetcherResponseType<ArticleType> | null> {
    //recuperatin des data du jour seulement
-   return getData<DailyArticleType>(ENDPOINT.DAILY)
+   return getData<FetcherResponseType<ArticleType>>(ENDPOINT.DAILY)
 }
 
-export async function WeeklyData(): Promise<WeeklyArticlesType | null> {
+export async function WeeklyData(): Promise<FetcherResponseType<WeeklyArticlesByDomainType> | null> {
    //recuperation des data de la semaine seulement
-   return getData<WeeklyArticlesType>(ENDPOINT.WEEKLY)
+   return getData<FetcherResponseType<WeeklyArticlesByDomainType>>(ENDPOINT.WEEKLY)
 }
 
 

@@ -1,3 +1,9 @@
+//strucute des endpoint get de recuperation d article pour la page 1
+export type FetcherResponseType<T> = {
+   data : T;
+   expires_at : string ; 
+}
+
 //type d'un article
 export type ArticleType = {
    id: string ;
@@ -13,19 +19,19 @@ export type ArticleType = {
    source: string;
 }
 
-// type de le response de l API pour l'article du jour
+// type de le response de l API pour l'article du jour - obselete pour l instant
 export type DailyArticleType = {
    daily_article: ArticleType;
    expires_at: string;
 }
 
-//type de la response de l Api pour les articles de la semaine
+//type de la response de l Api pour les articles de la semaine - obselete pour l instant
 export type WeeklyArticlesType = {
    weekly_articles : WeeklyArticlesByDomainType[];
    expires_at: string
 }
 
-type WeeklyArticlesByDomainType = {
+export type WeeklyArticlesByDomainType = {
    domain : string ;
    articles : ArticleType[] ;
 }
