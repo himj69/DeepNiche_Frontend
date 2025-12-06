@@ -18,3 +18,13 @@ export type DailyArticleType = {
    daily_article: ArticleType;
    expires_at: string;
 }
+
+//type de la response de l Api pour les articles de la semaine
+
+
+//type d erreur retouné par mes fonctions
+export type FetchError = {
+   message : string ;
+   status?: number;
+   original?: unknown;
+}

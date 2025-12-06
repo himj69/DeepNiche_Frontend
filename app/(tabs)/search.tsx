@@ -1,5 +1,6 @@
 import Container from "@/components/display/Container"
 import { useThemeColors } from "@/hooks/useThemeColors"
+import { Daily } from "@/services/api"
 import { Button, Text } from "tamagui"
 
 export default function Search () {
@@ -8,6 +9,7 @@ export default function Search () {
    return (
       <Container>
          <Text color={colors.inverse}>Search</Text>
+         <Button onPress={Daily}>caca</Button>
       </Container>
    )
 }
